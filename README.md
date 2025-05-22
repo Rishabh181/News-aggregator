@@ -1,6 +1,6 @@
 # AI-Powered News Aggregator with Insight Generation
 
-## How to Use
+# How to Use
 
 ### Step 1: Clone the Repository
 Download the `.ipynb` files:
@@ -60,3 +60,27 @@ Execute the notebooks using Jupyter Notebook in VS Code or any compatible enviro
   ```python
   ['World', 'Politics', 'Business', 'Finance', 'Technology',
    'Science', 'Health', 'Sports', 'Entertainment', 'Crime', ...]
+## 7. Headline Generation
+- **Model Used:**  
+  `"JulesBelveze/t5-small-headline-generator"`
+- **Functionality:**
+  - Generates compelling, concise headlines
+  - Optimized for readability and engagement
+
+## 8. Final Output
+Exports enriched data to CSV with the following columns:
+
+| Column Name          | Description                          |
+|----------------------|--------------------------------------|
+| Original title       | Source article's original headline   |
+| Cleaned article text | Processed and normalized text content|
+| Extracted summary    | AI-generated brief summary           |
+| Key insights         | Main takeaways from the article      |
+| Category             | News classification                  |
+| AI-generated headline| Model-generated headline alternative |
+| Source URL           | Original article URL                 |
+
+**Output Features:**
+- Structured data format for easy analysis
+- Ready-to-use for downstream applications
+- Preserves source attribution
