@@ -2,13 +2,13 @@
 
 # How to Use
 
-### Step 1: Download the files or clone the repository
+## Step 1: Download the files or clone the repository
 Download the `.ipynb` files:
 - `model1-notebook.ipynb`
 - `model2-notebook.ipynb`
 - `requirements.txt`
 
-### Step 2: Install Dependencies
+## Step 2: Install Dependencies
 In the terminal type:
 pip install -r requirements.txt
 
@@ -26,6 +26,57 @@ pip install -r requirements.txt
 Execute the notebooks using Jupyter Notebook in VS Code or any compatible environment.
 
 ---
+
+# System Architecture & Design (Model 1)
+
+## 1. Data Source – Google News API
+- Fetches real-time news data across various topics
+- Extracts news metadata including:
+  - Titles
+  - URLs
+  - Publication dates
+
+## 2. URL Extraction & DataFrame Creation
+- Collects article URLs from API data
+- Stores metadata in a structured Pandas DataFrame
+
+## 3. Article Extraction
+- Downloads and parses content for each URL
+
+## 4. Handling Website Variability
+**Challenge:** Diverse website structures and protections hinder consistent scraping  
+**Solution:** Implemented `newspaper3k` library with:
+- Robust article extraction
+- Fallback mechanisms for errors (e.g., 403 Forbidden)
+
+## 5. Google Gemini 1.5 Flash Integration
+
+### AI-Powered Content Generation
+We utilize **Gemini 1.5 Flash** (Google's fastest generative AI model) to create:
+
+- **Summaries**  
+  Concise 3-4 sentence abstracts of articles
+- **Categories**  
+  Topic classification from predefined labels
+- **Headlines**  
+  Optimized, engaging titles
+- **Key Insights**  
+  Bullet-pointed takeaways
+
+## 6. Final Output
+Exports enriched data to CSV with the following columns:
+
+| Column Name          | Description                          |
+|----------------------|--------------------------------------|
+| Original title       | Source article's original headline   |
+| Cleaned article text | Processed and normalized text content|
+| Extracted summary    | AI-generated brief summary           |
+| Key insights         | Main takeaways from the article      |
+| Category             | News classification                  |
+| AI-generated headline| Model-generated headline alternative |
+| Source URL           | Original article URL                 |
+
+
 
 # System Architecture & Design (Model 2)
 
