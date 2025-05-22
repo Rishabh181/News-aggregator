@@ -2,10 +2,11 @@
 
 # How to Use
 
-### Step 1: Clone the Repository
+### Step 1: Download the files or clone the repository
 Download the `.ipynb` files:
-- `model1.ipynb`
-- `model2.ipynb`
+- `model1-notebook.ipynb`
+- `model2-notebook.ipynb`
+- `requirements.txt`
 
 ### Step 2: Install Dependencies
 In the terminal type:
